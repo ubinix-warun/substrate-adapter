@@ -14,6 +14,11 @@
 
 * Run `./substrate-adapter`
 
+## Build
+
+* docker build -t ubinix5warun/dev:substrate-adapter-metadata-13.1 .
+* docker push ubinix5warun/dev:substrate-adapter-metadata-13.1
+
 ## Configuration
 
 ### Environment variables

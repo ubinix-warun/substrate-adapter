@@ -1,7 +1,7 @@
 FROM golang:stretch as go-builder
 
-ADD . /go/src/github.com/smartcontractkit/substrate-adapter
-RUN cd /go/src/github.com/smartcontractkit/substrate-adapter && go get && go build -o substrate-adapter
+ADD . /go/src/github.com/ubinix-warun/substrate-adapter
+RUN cd /go/src/github.com/ubinix-warun/substrate-adapter && go get && go build -o substrate-adapter
 
 FROM debian:stretch-slim as ssl-certificates
 RUN apt-get update && \
@@ -18,9 +18,10 @@ FROM parity/subkey:2.0.0 as subkey
 
 FROM debian:stretch-slim
 
-COPY --from=go-builder /go/src/github.com/smartcontractkit/substrate-adapter/substrate-adapter /usr/local/bin/
+COPY --from=go-builder /go/src/github.com/ubinix-warun/substrate-adapter/substrate-adapter /usr/local/bin/
 COPY --from=subkey /usr/local/bin/ /usr/local/bin/
 COPY --from=ssl-certificates /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
 
 EXPOSE 8080
 ENTRYPOINT ["substrate-adapter"]
+
