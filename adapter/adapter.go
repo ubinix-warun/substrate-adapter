@@ -267,5 +267,5 @@ func NewFluxMonitorCall(m *types.Metadata, req Request) (types.Call, error) {
 	fmt.Print(value)
 	fmt.Print("before submit")
 
-	return types.NewCall(m, "ChainlinkFeed.submit", feedID, roundID, value)
+	return types.NewCall(m, "BluzellehFeed.submit", feedID, roundID, value)
 }

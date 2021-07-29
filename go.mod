@@ -1,4 +1,4 @@
-module github.com/smartcontractkit/substrate-adapter
+module github.com/ubinix-warun/substrate-adapter
 
 go 1.13
 

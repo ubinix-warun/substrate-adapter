@@ -1,4 +1,8 @@
-# Substrate External Adapter
+# Substrate External Adapter (Bluzelle)
+
+## Pre
+
+* gvm use go1.13.8 && export GOPATH=~/Tools/GoPath
 
 ## Running
 

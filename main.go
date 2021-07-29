@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/smartcontractkit/substrate-adapter/adapter"
+	"github.com/ubinix-warun/substrate-adapter/adapter"
 )
 
 func main() {
